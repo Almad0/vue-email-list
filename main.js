@@ -1,5 +1,4 @@
 let root = new Vue({
-
   el: "#root",
 
   data: {
@@ -10,7 +9,7 @@ let root = new Vue({
     for (var i = 0; i < 10; i++) {
       axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
       .then(response => {
-        this.listEmails.push(response.data.response);
+      this.listEmails.push(response.data.response);
       });
     };
   },

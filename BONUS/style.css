@@ -1,0 +1,15 @@
+#root{
+  width: 100vw;
+  height: 100vh;
+}
+
+
+p{
+  font-size: 2rem;
+}
+
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -5,17 +5,41 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
   <title>Griglia API</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <div id="root">
+    <div class="flex">
+      <p v-if="index<6" v-for="(numero, index) in numbers">{{numero}}</p>
+    </div>
+
+    <div class="flex">
+      <p v-if="index>5&&index<=11" v-for="(numero, index) in numbers">{{numero}}</p>
+    </div>
+
+    <div class="flex">
+      <p v-if="index>11&&index<=17" v-for="(numero, index) in numbers">{{numero}}</p>
+    </div>
+
+    <div class="flex">
+      <p v-if="index>17&&index<24" v-for="(numero, index) in numbers">{{numero}}</p>
+    </div>
+
+    <div class="flex">
+      <p v-if="index>24&&index<31" v-for="(numero, index) in numbers">{{numero}}</p>
+    </div>
+
+    <div class="flex">
+      <p v-if="index>30" v-for="(numero, index) in numbers">{{numero}}</p>
+    </div>
 
 
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-  <script src="./js/main.js"></script>
+  <script src="main.js"></script>
 </body>
 
 </html>
