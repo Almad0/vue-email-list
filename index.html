@@ -5,12 +5,25 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
   <title>Lista Email</title>
+  <style media="screen">
+    body{
+      font-size: 2rem;
+      text-align: center;
+    }
+    ul{
+      list-style: none;
+    }
+  </style>
 </head>
 
 <body>
   <div id="root">
-
-
+    <div id="root">
+      <h1>Lista delle Email</h1>
+      <ul v-for="(emails, index) in listEmails">
+        <li>{{index+1}} - {{emails}}</li>
+      </ul>
+    </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
