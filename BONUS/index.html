@@ -11,27 +11,7 @@
 <body>
   <div id="root">
     <div class="flex">
-      <p v-if="index<6" v-for="(numero, index) in numbers">{{numero}}</p>
-    </div>
-
-    <div class="flex">
-      <p v-if="index>5&&index<=11" v-for="(numero, index) in numbers">{{numero}}</p>
-    </div>
-
-    <div class="flex">
-      <p v-if="index>11&&index<=17" v-for="(numero, index) in numbers">{{numero}}</p>
-    </div>
-
-    <div class="flex">
-      <p v-if="index>17&&index<24" v-for="(numero, index) in numbers">{{numero}}</p>
-    </div>
-
-    <div class="flex">
-      <p v-if="index>24&&index<31" v-for="(numero, index) in numbers">{{numero}}</p>
-    </div>
-
-    <div class="flex">
-      <p v-if="index>30" v-for="(numero, index) in numbers">{{numero}}</p>
+      <p class="grid" v-for="(numero, index) in numbers" @click="randomNumber(index)">{{numero}}</p>
     </div>
 
 

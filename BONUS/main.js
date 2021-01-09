@@ -7,21 +7,37 @@ let root = new Vue({
   el: "#root",
 
   data: {
-    numbers: []
+    numbers: [],
+    singleNum: 0
   },
 
-  mounted(){
-    for (var i = 0; i < 37; i++) {
-      axios.get('https://flynn.boolean.careers/exercises/api/random/int')
-      .then(response => {
-        this.numbers.push(response.data.response);
-      })
-    }
+  created(){
+    for (var i = 0; i < 36; i++) {
+      this.numbers.push(this.singleNum);
+    };
   },
 
 
   methods: {
+    randomNumber: function(index){
+      var numerello = 1;
+      axios.get('https://flynn.boolean.careers/exercises/api/random/int')
+      .then(response => {
+        numerello = response.data.response;
+        console.log("random: " + numerello);
+        this.singleNum = numerello;
+      })
+      console.log("numerello: " + numerello);
+      console.log(this.singleNum);
+    },
 
+  },
+
+  mounted(){
+    axios.get('https://flynn.boolean.careers/exercises/api/random/int')
+    .then(response => {
+      this.singleNum = response.data.response;
+    })
   }
 
 });
